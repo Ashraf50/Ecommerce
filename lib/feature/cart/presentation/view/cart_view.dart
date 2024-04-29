@@ -1,4 +1,4 @@
-import 'package:Ecommerce/core/utils/colors.dart';
+import 'package:Ecommerce/core/constant/colors.dart';
 import 'package:Ecommerce/core/widgets/custom_appbar.dart';
 import 'package:Ecommerce/feature/cart/presentation/view/widgets/cart_bottom_navbar.dart';
 import 'package:Ecommerce/feature/cart/presentation/view/widgets/cart_items_sample.dart';

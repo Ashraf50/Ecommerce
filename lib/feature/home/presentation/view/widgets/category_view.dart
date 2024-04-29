@@ -1,6 +1,6 @@
 import 'package:Ecommerce/core/model/category_model.dart';
 import 'package:Ecommerce/core/utils/api_services.dart';
-import 'package:Ecommerce/core/utils/colors.dart';
+import 'package:Ecommerce/core/constant/colors.dart';
 import 'package:Ecommerce/core/widgets/product_item.dart';
 import 'package:Ecommerce/core/widgets/shimmer_loading.dart';
 import 'package:Ecommerce/feature/details/presentation/view/item_details.dart';

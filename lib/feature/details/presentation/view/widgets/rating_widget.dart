@@ -1,5 +1,5 @@
 import 'package:Ecommerce/core/model/product_model.dart';
-import 'package:Ecommerce/core/utils/colors.dart';
+import 'package:Ecommerce/core/constant/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 

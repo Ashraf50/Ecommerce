@@ -1,5 +1,5 @@
 import 'package:Ecommerce/core/model/category_model.dart';
-import 'package:Ecommerce/core/utils/colors.dart';
+import 'package:Ecommerce/core/constant/colors.dart';
 import 'package:flutter/material.dart';
 
 class CategoryItem extends StatelessWidget {

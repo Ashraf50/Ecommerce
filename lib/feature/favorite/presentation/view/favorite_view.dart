@@ -1,4 +1,4 @@
-import 'package:Ecommerce/core/utils/colors.dart';
+import 'package:Ecommerce/core/constant/colors.dart';
 import 'package:Ecommerce/core/widgets/custom_appbar.dart';
 import 'package:Ecommerce/feature/favorite/presentation/view/widget/favorite_product_grid_view.dart';
 import 'package:flutter/material.dart';

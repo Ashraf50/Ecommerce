@@ -1,4 +1,4 @@
-import 'package:Ecommerce/core/utils/colors.dart';
+import 'package:Ecommerce/core/constant/colors.dart';
 import 'package:Ecommerce/feature/Authentication/presentation/view/sign_in_view.dart';
 import 'package:Ecommerce/feature/cart/presentation/view/cart_view.dart';
 import 'package:Ecommerce/feature/favorite/presentation/view/favorite_view.dart';

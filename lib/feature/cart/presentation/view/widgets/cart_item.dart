@@ -1,5 +1,5 @@
 import 'package:Ecommerce/core/model/product_model.dart';
-import 'package:Ecommerce/core/utils/colors.dart';
+import 'package:Ecommerce/core/constant/colors.dart';
 import 'package:Ecommerce/core/widgets/extract_word.dart';
 import 'package:Ecommerce/feature/cart/presentation/view_model/cart_cubit.dart';
 import 'package:flutter/material.dart';

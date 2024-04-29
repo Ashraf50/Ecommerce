@@ -1,7 +1,7 @@
 import 'package:Ecommerce/core/utils/api_services.dart';
 import 'package:Ecommerce/core/widgets/show_snack_bar.dart';
-import 'package:Ecommerce/feature/Authentication/data/auth_bloc/auth_bloc.dart';
 import 'package:Ecommerce/feature/Authentication/presentation/view/sign_in_view.dart';
+import 'package:Ecommerce/feature/Authentication/presentation/view_model/auth_bloc/auth_bloc.dart';
 import 'package:Ecommerce/feature/cart/presentation/view_model/cart_cubit.dart';
 import 'package:Ecommerce/feature/favorite/presentation/view_model/favorite_cubit.dart';
 import 'package:Ecommerce/feature/home/data/repos/home_repo_impl.dart';
@@ -21,7 +21,6 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-
   runApp(const MyApp());
 }
 

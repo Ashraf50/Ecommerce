@@ -1,4 +1,4 @@
-import 'package:Ecommerce/core/utils/colors.dart';
+import 'package:Ecommerce/core/constant/colors.dart';
 import 'package:flutter/material.dart';
 
 class TextWidget extends StatelessWidget {

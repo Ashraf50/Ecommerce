@@ -1,5 +1,5 @@
 import 'package:Ecommerce/core/model/product_model.dart';
-import 'package:Ecommerce/core/utils/colors.dart';
+import 'package:Ecommerce/core/constant/colors.dart';
 import 'package:Ecommerce/core/widgets/custom_appbar.dart';
 import 'package:Ecommerce/feature/details/presentation/view/widgets/item_bottom_navbar.dart';
 import 'package:Ecommerce/feature/details/presentation/view/widgets/rating_widget.dart';

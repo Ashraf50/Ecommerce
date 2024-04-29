@@ -1,4 +1,4 @@
-import 'package:Ecommerce/feature/Authentication/presentation/view/widget/sign_up_form.dart';
+import 'package:Ecommerce/feature/Authentication/presentation/view/widget/sign_up_view_body.dart';
 import 'package:flutter/material.dart';
 
 class SignUpView extends StatelessWidget {
@@ -6,16 +6,6 @@ class SignUpView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Expanded(
-      child: SafeArea(
-        child: Scaffold(
-          backgroundColor: Colors.white,
-          body: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: SignUpForm(),
-          ),
-        ),
-      ),
-    );
+    return const SignUpViewBody();
   }
 }

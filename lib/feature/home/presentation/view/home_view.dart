@@ -1,4 +1,4 @@
-import 'package:Ecommerce/core/utils/colors.dart';
+import 'package:Ecommerce/core/constant/colors.dart';
 import 'package:Ecommerce/feature/home/presentation/view/widgets/products_grid_view.dart';
 import 'package:Ecommerce/feature/home/presentation/view/widgets/categories_list_view.dart';
 import 'package:Ecommerce/feature/home/presentation/view/widgets/home_appbar.dart';

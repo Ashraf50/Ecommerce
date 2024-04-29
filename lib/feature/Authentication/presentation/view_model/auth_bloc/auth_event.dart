@@ -12,12 +12,24 @@ class LoginEvent extends AuthEvent {
 }
 
 class RegisterEvent extends AuthEvent {
-  final String userName;
+  final String username;
+
+  final String phoneNumber;
   final String email;
   final String password;
   RegisterEvent({
-    required this.userName,
+    required this.username,
+    required this.phoneNumber,
     required this.email,
     required this.password,
   });
 }
+
+class ResetEvent extends AuthEvent {
+  final String email;
+  ResetEvent({
+    required this.email,
+  });
+}
+
+class GoogleSignEvent extends AuthEvent {}

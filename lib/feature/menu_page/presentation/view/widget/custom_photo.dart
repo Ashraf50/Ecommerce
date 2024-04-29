@@ -1,4 +1,4 @@
-import 'package:Ecommerce/core/utils/colors.dart';
+import 'package:Ecommerce/core/constant/colors.dart';
 import 'package:Ecommerce/feature/menu_page/presentation/view/widget/camera_icon_button.dart';
 import 'package:Ecommerce/core/widgets/photo_view.dart';
 import 'package:Ecommerce/feature/menu_page/presentation/view_model/cubit/image_cubit.dart';

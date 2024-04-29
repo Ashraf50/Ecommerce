@@ -1,5 +1,5 @@
 // ignore_for_file: non_constant_identifier_names
-import 'package:Ecommerce/core/utils/colors.dart';
+import 'package:Ecommerce/core/constant/colors.dart';
 import 'package:Ecommerce/feature/cart/presentation/view/cart_view.dart';
 import 'package:Ecommerce/feature/favorite/presentation/view/favorite_view.dart';
 import 'package:Ecommerce/feature/home/presentation/view/home_view.dart';
