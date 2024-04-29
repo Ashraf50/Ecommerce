@@ -1,11 +1,10 @@
 import 'package:Ecommerce/core/constant/colors.dart';
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
 class CustomButton extends StatelessWidget {
   final String title;
-  void Function()? onTap;
-  CustomButton({
+  final Function() onTap;
+  const CustomButton({
     super.key,
     required this.title,
     required this.onTap,

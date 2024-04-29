@@ -2,6 +2,7 @@ import 'package:Ecommerce/core/constant/colors.dart';
 import 'package:Ecommerce/core/widgets/custom_button.dart';
 import 'package:Ecommerce/feature/cart/presentation/view_model/cart_cubit.dart';
 import 'package:Ecommerce/feature/cart/presentation/view_model/cart_state.dart';
+import 'package:Ecommerce/feature/checkout/presentation/view/payment_details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -41,12 +42,25 @@ class CartBottomNavBar extends StatelessWidget {
                 ],
               ),
               CustomButton(
-                onTap: () {},
+                onTap: () {
+                  showBottomSheet(context);
+                },
                 title: "Check Out",
               )
             ],
           ),
         );
+      },
+    );
+  }
+
+  void showBottomSheet(BuildContext context) {
+    showModalBottomSheet(
+      isScrollControlled: true,
+      showDragHandle: true,
+      context: context,
+      builder: (BuildContext context) {
+        return const PaymentDetailsView();
       },
     );
   }
