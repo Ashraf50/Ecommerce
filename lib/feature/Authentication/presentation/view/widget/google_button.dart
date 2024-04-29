@@ -9,7 +9,6 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
-
 class GoogleButton extends StatelessWidget {
   const GoogleButton({super.key});
 
@@ -25,7 +24,7 @@ class GoogleButton extends StatelessWidget {
           isLoading = false;
         } else if (state is GooglSIgnFailure) {
           isLoading = false;
-          showSnackBar(context, "try again later");
+          showSnackBar(context, state.messageError);
         }
       },
       builder: (context, state) {
@@ -46,7 +45,7 @@ class GoogleButton extends StatelessWidget {
             ),
             child: isLoading
                 ? const SpinKitWave(
-                    color: AppColors.grey,
+                    color: AppColors.primaryColor,
                     size: 20.0,
                   )
                 : Row(
