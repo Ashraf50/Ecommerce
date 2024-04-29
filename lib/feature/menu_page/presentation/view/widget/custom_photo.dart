@@ -53,7 +53,8 @@ class CustomPhoto extends StatelessWidget {
                                     child: InkWell(
                                       onTap: () {
                                         Get.to(
-                                          PhotoViewer(image: data["imgLink"]),
+                                          () => PhotoViewer(
+                                              image: data["imgLink"]),
                                         );
                                       },
                                       child: CircleAvatar(
@@ -99,7 +100,7 @@ class CustomPhoto extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    "${data["username"]}",
+                    "${data["Username"]}",
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18,

@@ -1,49 +1,34 @@
 {
   "project_info": {
-    "project_number": "552551742254",
-    "project_id": "new-ecommerce-e42bd",
-    "storage_bucket": "new-ecommerce-e42bd.appspot.com"
+    "project_number": "1081077262444",
+    "project_id": "newecommerce-d72c9",
+    "storage_bucket": "newecommerce-d72c9.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:552551742254:android:f3e5474da2dfabfb9558bf",
+        "mobilesdk_app_id": "1:1081077262444:android:8046acd7dde394342d5049",
         "android_client_info": {
-          "package_name": "com.example.shopping_ecomerce"
+          "package_name": "com.example.ecommerce"
         }
       },
       "oauth_client": [
         {
-          "client_id": "552551742254-nfqv8e1ecjpqhlcfbv3al26pqumhsir1.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.shopping_ecomerce",
-            "certificate_hash": "083edc76b5027e10c33fc3c4eb83ff0ef8629491"
-          }
-        },
-        {
-          "client_id": "552551742254-rocadfsua3di8qaon7bl7t5ucla7885t.apps.googleusercontent.com",
+          "client_id": "1081077262444-gkbe777n5tv0oujor27cfm9noqurbpv5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDnwJZr7wVdqWSe6X28f7WHQKiLhvgIOPk"
+          "current_key": "AIzaSyCCRocSz6ehrameuKQJfLaisK2M2vo8jHI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "552551742254-rocadfsua3di8qaon7bl7t5ucla7885t.apps.googleusercontent.com",
+              "client_id": "1081077262444-gkbe777n5tv0oujor27cfm9noqurbpv5.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "552551742254-da9jvucjgr6rg2hnn67j529qdd2ngkf8.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.shoppingEcomerce"
-              }
             }
           ]
         }

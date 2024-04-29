@@ -21,7 +21,7 @@ class CartItemListView extends StatelessWidget {
           itemBuilder: (context, index) {
             return InkWell(
               onTap: () {
-                Get.to(
+                Get.to(() =>
                   DetailsView(product: cubit.selectedProduct[index]),
                 );
               },

@@ -26,14 +26,17 @@ class FavoriteProductGridView extends StatelessWidget {
             return GestureDetector(
               onTap: () {
                 Get.to(
-                  DetailsView(product: cubit.selectedProduct[index]),
+                  () => DetailsView(product: cubit.selectedProduct[index]),
                 );
               },
               child: ProductItem(
                   onPressed: () {
                     cubit.delete(cubit.selectedProduct[index]);
                   },
-                  icon: const Icon(Icons.delete,color: Colors.red,),
+                  icon: const Icon(
+                    Icons.delete,
+                    color: Colors.red,
+                  ),
                   product: cubit.selectedProduct[index]),
             );
           },

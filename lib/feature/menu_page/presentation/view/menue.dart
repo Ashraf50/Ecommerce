@@ -67,7 +67,7 @@ class MenuView extends StatelessWidget {
               color: AppColors.primaryColor,
             ),
             onTap: () {
-              Get.to(const FavoriteView());
+              Get.to(() => const FavoriteView());
             },
           ),
           CustomListTile(
@@ -77,7 +77,7 @@ class MenuView extends StatelessWidget {
               color: AppColors.primaryColor,
             ),
             onTap: () {
-              Get.to(const CartView());
+              Get.to(() =>const CartView());
             },
           ),
           CustomListTile(
@@ -104,7 +104,7 @@ class MenuView extends StatelessWidget {
             ),
             onTap: () async {
               await FirebaseAuth.instance.signOut();
-              Get.to(const SignInView());
+              Get.to(() => const SignInView());
             },
           ),
         ],

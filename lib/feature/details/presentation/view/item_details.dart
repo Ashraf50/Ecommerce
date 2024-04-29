@@ -37,7 +37,7 @@ class DetailsView extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             child: InkWell(
               onTap: () {
-                Get.to(PhotoViewer(image: product.image));
+                Get.to(() => PhotoViewer(image: product.image));
               },
               child: Image.network(
                 product.image,

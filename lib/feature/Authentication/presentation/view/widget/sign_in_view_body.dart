@@ -41,6 +41,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
         } else if (state is LoginFailure) {
           isLoading = false;
           showSnackBar(context, state.message);
+          print(state.message);
         }
       },
       builder: (context, state) {

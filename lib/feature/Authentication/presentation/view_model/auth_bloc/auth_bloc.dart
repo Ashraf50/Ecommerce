@@ -100,7 +100,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
                 {
                   'Username': googleUser!.displayName,
                   'email': googleUser.email,
-                  'photoUrl': googleUser.photoUrl,
+                  'imgLink': googleUser.photoUrl,
                 },
               )
               .then(
@@ -110,8 +110,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
               // ignore: avoid_print
               .catchError((error) => print("Failed to add user: $error"));
           emit(GooglSIgnSuccess());
-        } on Exception {
-          emit(GooglSIgnFailure(messageError: "something went wrong"));
+        } on Exception catch (e) {
+          emit(GooglSIgnFailure(messageError: e.toString()));
         }
       }
     });
