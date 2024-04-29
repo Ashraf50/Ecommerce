@@ -1,9 +1,9 @@
-import 'package:Ecommerce/core/constant/text_style.dart';
 import 'package:Ecommerce/core/widgets/custom_button.dart';
 import 'package:Ecommerce/core/widgets/show_snack_bar.dart';
 import 'package:Ecommerce/feature/Authentication/presentation/view/sign_in_view.dart';
 import 'package:Ecommerce/feature/Authentication/presentation/view/widget/checked_account_text.dart';
 import 'package:Ecommerce/feature/Authentication/presentation/view/widget/custom_textfield.dart';
+import 'package:Ecommerce/feature/Authentication/presentation/view/widget/custom_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -42,15 +42,11 @@ class ForgetPasswordViewBody extends StatelessWidget {
                   physics: const BouncingScrollPhysics(),
                   children: [
                     const SizedBox(
-                      height: 158,
+                      height: 50,
                     ),
-                    const Text(
-                      textAlign: TextAlign.center,
-                      "Forgot Password",
-                      style: Style.textStyle24,
-                    ),
+                    const CustomWidget(title: "Forget Password"),
                     const SizedBox(
-                      height: 70,
+                      height: 100,
                     ),
                     CustomTextfield(
                       hintText: "Enter Your Email",
@@ -68,7 +64,7 @@ class ForgetPasswordViewBody extends StatelessWidget {
                       title: "Reset",
                     ),
                     const SizedBox(
-                      height: 200,
+                      height: 10,
                     ),
                     CheckedAccount(
                       title: "Remember Password?",

@@ -6,6 +6,7 @@ import 'package:Ecommerce/feature/Authentication/presentation/view/forget_passwo
 import 'package:Ecommerce/feature/Authentication/presentation/view/sign_up_view.dart';
 import 'package:Ecommerce/feature/Authentication/presentation/view/widget/checked_account_text.dart';
 import 'package:Ecommerce/feature/Authentication/presentation/view/widget/custom_textfield.dart';
+import 'package:Ecommerce/feature/Authentication/presentation/view/widget/custom_widget.dart';
 import 'package:Ecommerce/feature/Authentication/presentation/view/widget/divider_text.dart';
 import 'package:Ecommerce/feature/Authentication/presentation/view/widget/google_button.dart';
 import 'package:Ecommerce/feature/Authentication/presentation/view_model/auth_bloc/auth_bloc.dart';
@@ -57,18 +58,9 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                     physics: const BouncingScrollPhysics(),
                     children: [
                       const SizedBox(
-                        height: 100,
+                        height: 50,
                       ),
-                      const Center(
-                        child: Text(
-                          "Ecommerce",
-                          style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
-                            color: AppColors.primaryColor,
-                          ),
-                        ),
-                      ),
+                      const CustomWidget(title: "Login"),
                       const SizedBox(
                         height: 58,
                       ),
