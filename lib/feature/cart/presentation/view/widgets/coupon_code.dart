@@ -3,6 +3,7 @@ import 'package:Ecommerce/core/constant/text_style.dart';
 import 'package:Ecommerce/core/widgets/custom_button.dart';
 import 'package:Ecommerce/core/widgets/show_snack_bar.dart';
 import 'package:Ecommerce/feature/Authentication/presentation/view/widget/custom_textfield.dart';
+import 'package:Ecommerce/feature/cart/presentation/view_model/cart_cubit.dart';
 import 'package:flutter/material.dart';
 
 class CouponCode extends StatelessWidget {
@@ -15,7 +16,7 @@ class CouponCode extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       child: Row(
         children: [
-          GestureDetector(
+          InkWell(
             onTap: () {
               showDiscountDialog(context);
             },
@@ -88,6 +89,8 @@ showDiscountDialog(
                     title: "Apply",
                     onTap: () {
                       if (formKey.currentState!.validate()) {
+                        var cubit = CartCubit.get(context);
+                        cubit.discountActivated = true;
                         showSnackBar(
                           context,
                           "Discount Activated",

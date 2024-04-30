@@ -6,6 +6,7 @@ import 'package:Ecommerce/feature/cart/presentation/view_model/cart_cubit.dart';
 import 'package:Ecommerce/feature/favorite/presentation/view_model/favorite_cubit.dart';
 import 'package:Ecommerce/feature/home/data/repos/home_repo_impl.dart';
 import 'package:Ecommerce/feature/home/presentation/view_model/all_product_cubit/fetch_all_products_cubit.dart';
+import 'package:Ecommerce/feature/search/view_model/search_cubit/search_cubit.dart';
 import 'package:Ecommerce/feature/menu_page/presentation/view_model/cubit/image_cubit.dart';
 import 'package:Ecommerce/feature/splash/splash_view.dart';
 import 'package:Ecommerce/firebase_options.dart';
@@ -48,6 +49,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => AuthBloc(),
+        ),
+        BlocProvider(
+          create: (context) => SearchCubit(),
         )
       ],
       child: GetMaterialApp(

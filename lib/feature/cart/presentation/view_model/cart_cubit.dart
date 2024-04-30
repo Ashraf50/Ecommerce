@@ -8,6 +8,7 @@ class CartCubit extends Cubit<CartState> {
 
   List selectedProduct = [];
   double price = 0;
+  bool discountActivated = false;
 
   add(ProductModel product) {
     selectedProduct.add(product);

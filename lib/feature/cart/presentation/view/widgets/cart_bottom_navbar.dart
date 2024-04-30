@@ -31,14 +31,23 @@ class CartBottomNavBar extends StatelessWidget {
                       color: AppColors.primaryColor,
                     ),
                   ),
-                  Text(
-                    "\$ ${cubit.price}",
-                    style: const TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.primaryColor,
-                    ),
-                  ),
+                  cubit.discountActivated
+                      ? Text(
+                          "\$ ${cubit.price * 0.8}",
+                          style: const TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.primaryColor,
+                          ),
+                        )
+                      : Text(
+                          "\$ ${cubit.price}",
+                          style: const TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.primaryColor,
+                          ),
+                        ),
                 ],
               ),
               CustomButton(

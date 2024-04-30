@@ -1,3 +1,4 @@
+import 'package:Ecommerce/core/constant/colors.dart';
 import 'package:flutter/material.dart';
 
 class Style {
@@ -20,6 +21,12 @@ class Style {
   static const textStyle16 = TextStyle(
     fontSize: 16,
     fontFamily: "Poppins",
+  );
+  
+static const textStyle18 = TextStyle(
+    fontSize: 18,
+    fontFamily: "Poppins",
+    color: AppColors.primaryColor
   );
   static const textStyle14 = TextStyle(
     fontSize: 14,

@@ -7,7 +7,9 @@ import 'package:Ecommerce/feature/home/presentation/view/widgets/text_widget.dar
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+  const HomeView({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
