@@ -1,7 +1,8 @@
+import 'package:Ecommerce/core/constant/colors.dart';
+import 'package:Ecommerce/core/widgets/custom_appbar.dart';
 import 'package:Ecommerce/core/widgets/custom_button.dart';
 import 'package:Ecommerce/feature/checkout/presentation/view/thank_you_view.dart';
 import 'package:Ecommerce/feature/checkout/presentation/view/widget/credit_card.dart';
-import 'package:Ecommerce/feature/checkout/presentation/view/widget/payment_listview.dart';
 import 'package:flutter/material.dart';
 
 class PaymentDetailsViewBody extends StatelessWidget {
@@ -11,34 +12,25 @@ class PaymentDetailsViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: ListView(
-            children: [
-              const SizedBox(
-                height: 20,
-              ),
-              const Center(
-                child: Text(
-                  "Payment Details",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              const PaymentMethodListView(),
-              const SizedBox(
-                height: 20,
-              ),
-              const CustomCreditCard(),
-              const SizedBox(
-                height: 20,
-              ),
-              CustomButton(
+        body: ListView(
+          children: [
+            CustomAppBar(
+              leftOnPressed: () {
+                Navigator.pop(context);
+              },
+              rightOnPressed: () {},
+              title: "Payment Details",
+              leftIcon: Icons.arrow_back,
+              color: AppColors.primaryColor,
+              rightIcon: Icons.credit_card,
+            ),
+            const CustomCreditCard(),
+            const SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              child: CustomButton(
                 title: "Pay",
                 onTap: () {
                   Navigator.push(
@@ -48,9 +40,9 @@ class PaymentDetailsViewBody extends StatelessWidget {
                     ),
                   );
                 },
-              )
-            ],
-          ),
+              ),
+            )
+          ],
         ),
       ),
     );

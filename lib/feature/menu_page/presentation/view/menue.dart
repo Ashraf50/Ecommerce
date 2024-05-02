@@ -77,7 +77,7 @@ class MenuView extends StatelessWidget {
               color: AppColors.primaryColor,
             ),
             onTap: () {
-              Get.to(() =>const CartView());
+              Get.to(() => const CartView());
             },
           ),
           CustomListTile(

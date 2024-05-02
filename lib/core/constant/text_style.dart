@@ -22,12 +22,9 @@ class Style {
     fontSize: 16,
     fontFamily: "Poppins",
   );
-  
-static const textStyle18 = TextStyle(
-    fontSize: 18,
-    fontFamily: "Poppins",
-    color: AppColors.primaryColor
-  );
+
+  static const textStyle18 = TextStyle(
+      fontSize: 18, fontFamily: "Poppins", color: AppColors.primaryColor);
   static const textStyle14 = TextStyle(
     fontSize: 14,
     fontFamily: "Poppins",
