@@ -13,14 +13,14 @@ class CartCubit extends Cubit<CartState> {
   add(ProductModel product) {
     selectedProduct.add(product);
     emit(UpdateSelectedProduct());
-    price += product.price.round();
+    price += product.price!.round();
     emit(UpdatePrice());
   }
 
   delete(ProductModel product) {
     selectedProduct.remove(product);
     emit(UpdateSelectedProduct());
-    price -= product.price.round();
+    price -= product.price!.round();
     emit(UpdatePrice());
   }
 }

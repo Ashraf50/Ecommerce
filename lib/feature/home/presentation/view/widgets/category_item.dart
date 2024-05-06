@@ -4,12 +4,9 @@ import 'package:flutter/material.dart';
 
 class CategoryItem extends StatelessWidget {
   final CategoryModel categoryName;
-
-  final CategoryModel categoryImage;
   const CategoryItem({
     super.key,
     required this.categoryName,
-    required this.categoryImage,
   });
 
   @override
@@ -17,7 +14,7 @@ class CategoryItem extends StatelessWidget {
     return Row(children: [
       Container(
         margin: const EdgeInsets.symmetric(horizontal: 10),
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
@@ -25,11 +22,6 @@ class CategoryItem extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset(
-              categoryImage.categoryImage,
-              width: 40,
-              height: 40,
-            ),
             Text(
               categoryName.categoryName,
               style: const TextStyle(

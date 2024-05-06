@@ -30,7 +30,7 @@ class HomeView extends StatelessWidget {
                 SearchWidget(),
                 TextWidget(title: "Categories"),
                 CategoriesListView(),
-                TextWidget(title: "Best Selling"),
+                TextWidget(title: "All Products"),
                 ProductsListView(),
               ],
             ),

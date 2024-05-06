@@ -57,6 +57,7 @@ dependencies:
   flutter_credit_card: ^4.0.1
   intl: ^0.19.0
   flutter_paypal_payment: ^1.0.6
+  card_swiper: ^3.0.1
 
 dev_dependencies:
   flutter_lints: ^2.0.0

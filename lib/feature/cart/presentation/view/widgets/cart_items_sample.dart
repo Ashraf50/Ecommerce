@@ -1,5 +1,5 @@
 import 'package:Ecommerce/feature/cart/presentation/view/widgets/cart_item.dart';
-import 'package:Ecommerce/feature/details/presentation/view/item_details.dart';
+import 'package:Ecommerce/feature/details/presentation/view/details_view.dart';
 import 'package:Ecommerce/feature/cart/presentation/view_model/cart_cubit.dart';
 import 'package:Ecommerce/feature/cart/presentation/view_model/cart_state.dart';
 import 'package:flutter/material.dart';

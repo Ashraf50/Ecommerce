@@ -3,12 +3,11 @@ import 'package:Ecommerce/core/utils/api_services.dart';
 import 'package:Ecommerce/core/constant/colors.dart';
 import 'package:Ecommerce/core/widgets/product_item.dart';
 import 'package:Ecommerce/core/widgets/shimmer_loading.dart';
-import 'package:Ecommerce/feature/details/presentation/view/item_details.dart';
+import 'package:Ecommerce/feature/details/presentation/view/details_view.dart';
 import 'package:Ecommerce/feature/favorite/presentation/view_model/favorite_cubit.dart';
 import 'package:Ecommerce/feature/favorite/presentation/view_model/favorite_state.dart';
 import 'package:Ecommerce/feature/home/data/repos/home_repo_impl.dart';
 import 'package:Ecommerce/feature/home/presentation/view_model/all_category_cubit/fetch_all_category_cubit.dart';
-import 'package:Ecommerce/feature/menu_page/presentation/view/widget/menu_app_bar.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,11 +21,22 @@ class CategoryView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.secondaryColor,
+      appBar: AppBar(
+        iconTheme: const IconThemeData(color: AppColors.primaryColor),
+        backgroundColor: AppColors.secondaryColor,
+        centerTitle: true,
+        elevation: 0,
+        title: Text(
+          category.categoryName,
+          style: const TextStyle(
+            fontSize: 23,
+            color: AppColors.primaryColor,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
       body: ListView(
         children: [
-          MenuAppBar(
-            title: category.categoryName,
-          ),
           BlocBuilder<FavoriteCubit, FavoriteState>(
             builder: (context, state) {
               var favCubit = FavoriteCubit.get(context);

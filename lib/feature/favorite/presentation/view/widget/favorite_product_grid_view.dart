@@ -1,4 +1,4 @@
-import 'package:Ecommerce/feature/details/presentation/view/item_details.dart';
+import 'package:Ecommerce/feature/details/presentation/view/details_view.dart';
 import 'package:Ecommerce/feature/favorite/presentation/view_model/favorite_cubit.dart';
 import 'package:Ecommerce/feature/favorite/presentation/view_model/favorite_state.dart';
 import 'package:Ecommerce/core/widgets/product_item.dart';
@@ -17,7 +17,7 @@ class FavoriteProductGridView extends StatelessWidget {
         return GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            childAspectRatio: 0.68,
+            childAspectRatio: 0.8,
           ),
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),

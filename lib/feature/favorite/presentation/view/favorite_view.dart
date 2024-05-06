@@ -1,5 +1,4 @@
 import 'package:Ecommerce/core/constant/colors.dart';
-import 'package:Ecommerce/core/widgets/custom_appbar.dart';
 import 'package:Ecommerce/feature/favorite/presentation/view/widget/favorite_product_grid_view.dart';
 import 'package:flutter/material.dart';
 
@@ -9,16 +8,25 @@ class FavoriteView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        iconTheme: const IconThemeData(
+          color: AppColors.primaryColor,
+          size: 30,
+        ),
+        title: const Padding(
+          padding: EdgeInsets.only(left: 20),
+          child: Text(
+            "Favorite",
+            style: TextStyle(
+              fontSize: 23,
+              color: AppColors.primaryColor,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
       body: ListView(
         children: [
-          CustomAppBar(
-            leftOnPressed: () {},
-            rightOnPressed: () {},
-            rightIcon: Icons.favorite_border,
-            color: AppColors.primaryColor,
-            title: "Favorite",
-            leftIcon: Icons.keyboard_arrow_left_outlined,
-          ),
           Container(
             padding: const EdgeInsets.only(top: 15),
             decoration: const BoxDecoration(

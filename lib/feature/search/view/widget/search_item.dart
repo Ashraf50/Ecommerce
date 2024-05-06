@@ -31,11 +31,11 @@ class SearchItem extends StatelessWidget {
               width: 70,
               height: 70,
               margin: const EdgeInsets.only(right: 5),
-              child: Image.network(product.image),
+              child: Image.network(product.images![0]),
             ),
             Expanded(
               child: Text(
-                (product.title),
+                (product.title!),
                 style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,

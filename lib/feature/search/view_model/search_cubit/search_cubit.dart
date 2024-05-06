@@ -6,7 +6,7 @@ class SearchCubit extends Cubit<List<ProductModel>> {
 
   void searchCategory(String query) {
     List<ProductModel> filteredCategory = state
-        .where((product) => (product.title.toLowerCase().contains(query)))
+        .where((product) => (product.title!.toLowerCase().contains(query)))
         .toList();
     emit(filteredCategory);
   }

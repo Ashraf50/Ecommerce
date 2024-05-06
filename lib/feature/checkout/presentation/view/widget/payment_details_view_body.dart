@@ -1,7 +1,6 @@
 import 'package:Ecommerce/core/constant/colors.dart';
 import 'package:Ecommerce/core/widgets/custom_appbar.dart';
 import 'package:Ecommerce/core/widgets/custom_button.dart';
-import 'package:Ecommerce/feature/checkout/presentation/view/thank_you_view.dart';
 import 'package:Ecommerce/feature/checkout/presentation/view/widget/credit_card.dart';
 import 'package:flutter/material.dart';
 
@@ -32,14 +31,7 @@ class PaymentDetailsViewBody extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 8),
               child: CustomButton(
                 title: "Pay",
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ThankYouView(),
-                    ),
-                  );
-                },
+                onTap: () {},
               ),
             )
           ],

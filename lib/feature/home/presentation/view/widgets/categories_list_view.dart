@@ -19,9 +19,7 @@ class CategoriesListView extends StatelessWidget {
             onTap: () {
               Get.to(CategoryView(category: allCategories[index]));
             },
-            child: CategoryItem(
-                categoryImage: allCategories[index],
-                categoryName: allCategories[index]),
+            child: CategoryItem(categoryName: allCategories[index]),
           );
         },
       ),

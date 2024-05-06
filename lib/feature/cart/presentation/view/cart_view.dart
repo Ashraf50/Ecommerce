@@ -1,5 +1,4 @@
 import 'package:Ecommerce/core/constant/colors.dart';
-import 'package:Ecommerce/core/widgets/custom_appbar.dart';
 import 'package:Ecommerce/feature/cart/presentation/view/widgets/cart_bottom_navbar.dart';
 import 'package:Ecommerce/feature/cart/presentation/view/widgets/cart_items_sample.dart';
 import 'package:Ecommerce/feature/cart/presentation/view/widgets/coupon_code.dart';
@@ -11,18 +10,25 @@ class CartView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        iconTheme: const IconThemeData(
+          color: AppColors.primaryColor,
+          size: 30,
+        ),
+        title: const Padding(
+          padding: EdgeInsets.only(left: 20),
+          child: Text(
+            "Cart",
+            style: TextStyle(
+              fontSize: 23,
+              color: AppColors.primaryColor,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
       body: ListView(
         children: [
-          CustomAppBar(
-            title: "Cart",
-            leftIcon: Icons.keyboard_arrow_left,
-            rightIcon: Icons.more_vert,
-            color: AppColors.primaryColor,
-            leftOnPressed: () {
-              Navigator.pop(context);
-            },
-            rightOnPressed: () {},
-          ),
           Container(
             padding: const EdgeInsets.only(top: 15),
             decoration: const BoxDecoration(

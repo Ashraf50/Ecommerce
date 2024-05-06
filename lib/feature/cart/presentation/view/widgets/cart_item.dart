@@ -31,10 +31,13 @@ class CartItem extends StatelessWidget {
             width: 70,
             height: 70,
             margin: const EdgeInsets.only(right: 5),
-            child: Image.network(product.image),
+            child: Image.network(product.thumbnail!),
+          ),
+          const SizedBox(
+            width: 5,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10),
+            padding: const EdgeInsets.symmetric(vertical: 20),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,

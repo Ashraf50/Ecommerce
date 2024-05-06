@@ -1,6 +1,6 @@
 import 'package:Ecommerce/core/constant/colors.dart';
 import 'package:Ecommerce/core/model/product_model.dart';
-import 'package:Ecommerce/feature/details/presentation/view/item_details.dart';
+import 'package:Ecommerce/feature/details/presentation/view/details_view.dart';
 import 'package:Ecommerce/feature/search/view/widget/search_item.dart';
 import 'package:Ecommerce/feature/search/view/widget/textfield_search.dart';
 import 'package:Ecommerce/feature/search/view_model/search_cubit/search_cubit.dart';
@@ -96,7 +96,7 @@ class _SearchViewState extends State<SearchView> {
   void searchSurahAr(String query) {
     setState(() {
       filteredProducts = widget.product
-          .where((surah) => (surah.title.toLowerCase().contains(query)))
+          .where((surah) => (surah.title!.toLowerCase().contains(query)))
           .toList();
     });
   }

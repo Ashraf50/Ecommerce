@@ -35,12 +35,13 @@ class ProductItem extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: AppColors.primaryColor,
                     borderRadius: BorderRadius.circular(20)),
-                child: const Text(
-                  "-50%",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold),
+                child: Text(
+                  "-${product.discountPercentage} %",
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               IconButton(onPressed: onPressed, icon: icon),
@@ -49,9 +50,8 @@ class ProductItem extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(10),
             child: Image.network(
-              product.image,
-              width: 90,
-              height: 90,
+              product.thumbnail!,
+              height: 100,
             ),
           ),
           Container(
@@ -59,7 +59,7 @@ class ProductItem extends StatelessWidget {
             alignment: Alignment.centerLeft,
             child: Text(
               maxLines: 2,
-              product.title,
+              product.title!,
               style: const TextStyle(
                   overflow: TextOverflow.ellipsis,
                   fontWeight: FontWeight.bold,

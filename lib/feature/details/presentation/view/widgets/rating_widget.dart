@@ -13,13 +13,13 @@ class RatingView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     late double rate;
-    if (model.ratingModel.rate > 4.5) {
+    if (model.rating! > 4.5) {
       rate = 5.0;
-    } else if (model.ratingModel.rate > 3.5) {
+    } else if (model.rating! > 3.5) {
       rate = 4.0;
-    } else if (model.ratingModel.rate > 2.5) {
+    } else if (model.rating! > 2.5) {
       rate = 3.0;
-    } else if (model.ratingModel.rate > 1.5) {
+    } else if (model.rating! > 1.5) {
       rate = 2;
     } else {
       rate = 1;
@@ -28,7 +28,7 @@ class RatingView extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          "Rating: ${model.ratingModel.rate} (${model.ratingModel.count})",
+          "Rating: ${model.rating!}",
           style: const TextStyle(
             fontSize: 22,
             color: AppColors.primaryColor,

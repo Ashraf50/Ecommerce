@@ -2,17 +2,14 @@ import 'package:Ecommerce/core/model/product_model.dart';
 import 'package:Ecommerce/core/constant/colors.dart';
 import 'package:Ecommerce/core/widgets/custom_appbar.dart';
 import 'package:Ecommerce/feature/details/presentation/view/widgets/item_bottom_navbar.dart';
+import 'package:Ecommerce/feature/details/presentation/view/widgets/product_images_list_view.dart';
 import 'package:Ecommerce/feature/details/presentation/view/widgets/rating_widget.dart';
 import 'package:Ecommerce/feature/favorite/presentation/view_model/favorite_cubit.dart';
-import 'package:Ecommerce/core/widgets/photo_view.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
-// ignore: must_be_immutable
 class DetailsView extends StatelessWidget {
-  ProductModel product;
-
-  DetailsView({super.key, required this.product});
+  final ProductModel product;
+  const DetailsView({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -33,18 +30,7 @@ class DetailsView extends StatelessWidget {
               favCubit.add(product);
             },
           ),
-          Padding(
-            padding: const EdgeInsets.all(16),
-            child: InkWell(
-              onTap: () {
-                Get.to(() => PhotoViewer(image: product.image));
-              },
-              child: Image.network(
-                product.image,
-                height: 200,
-              ),
-            ),
-          ),
+          ProductImages(product: product),
           const SizedBox(
             height: 20,
           ),
@@ -53,11 +39,11 @@ class DetailsView extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 10, top: 40),
+                  padding: const EdgeInsets.only(bottom: 10, top: 20),
                   child: Align(
                     alignment: Alignment.topLeft,
                     child: Text(
-                      product.title,
+                      product.title!,
                       style: const TextStyle(
                         fontSize: 28,
                         color: AppColors.primaryColor,
@@ -70,10 +56,24 @@ class DetailsView extends StatelessWidget {
                   model: product,
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
-                Text(
-                  product.description,
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    "Category: ${product.category!}",
+                    style: const TextStyle(
+                      fontSize: 22,
+                      color: AppColors.primaryColor,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                SelectableText(
+                  product.description!,
                   textAlign: TextAlign.justify,
                   style: const TextStyle(
                     fontSize: 17,

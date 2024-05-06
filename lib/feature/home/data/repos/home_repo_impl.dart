@@ -13,10 +13,10 @@ class HomeRepoImpl implements HomeRepo {
   Future<Either<Failure, List<ProductModel>>> fetchAllProducts() async {
     try {
       var data =
-          await apiService.get(endpoint: "https://fakestoreapi.com/products");
+          await apiService.get(endPoint: "https://dummyjson.com/products");
       List<ProductModel> productList = [];
-      for (int i = 0; i < data.length; i++) {
-        productList.add(ProductModel.fromJson(data[i]));
+      for (var product in data["products"]) {
+        productList.add(ProductModel.fromJson(product));
       }
       return Right(productList);
     } catch (e) {
@@ -34,10 +34,10 @@ class HomeRepoImpl implements HomeRepo {
       {required String category}) async {
     try {
       var data = await apiService.get(
-          endpoint: "https://fakestoreapi.com/products/category/$category");
+          endPoint: "https://dummyjson.com/products/category/$category");
       List<ProductModel> productList = [];
-      for (int i = 0; i < data.length; i++) {
-        productList.add(ProductModel.fromJson(data[i]));
+      for (var product in data["products"]) {
+        productList.add(ProductModel.fromJson(product));
       }
       return Right(productList);
     } catch (e) {
