@@ -1,6 +1,6 @@
 class PaypalKey {
   static String clientId =
-      "AWfKgO4FYOOwLvCOn0pNPxAiN55R0lySd1BCsgH_ILXjcRwDLo0aMHs1TxZZmLEacdzmx9zbUiU-FNSv";
+      'Af8gJQ8Rx21UsMn2XW3K2nnwuYY7hyD6T_BrKg_r9peGWXOq4MD3fNwFzCP3JZ8cGddSH1pMDS1SRFkj';
   static String secretKey =
-      "EOI5OLOggKbqTUA_gdzzGE7NZU1ZXVbOj0U4w_h4QkXYGfWmTs13CXATstvfsZgZrkTq8EK52FjmC07-";
+      'EGpBnFd8DMWGggi031PP2Rrbj9AIJHY3WKSKmVygMD7l9cu0xNSvb9YYlVyWLuvYxA4KJJnWfmChLufo';
 }

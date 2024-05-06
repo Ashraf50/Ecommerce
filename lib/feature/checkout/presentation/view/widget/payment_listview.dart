@@ -74,7 +74,7 @@ class _PaymentMethodListViewState extends State<PaymentMethodListView> {
     var transaction = getTransactionData();
     Navigator.of(context).push(MaterialPageRoute(
       builder: (BuildContext context) => PaypalCheckoutView(
-        sandboxMode: true,
+        sandboxMode: false,
         clientId: PaypalKey.clientId,
         secretKey: PaypalKey.secretKey,
         transactions: [
