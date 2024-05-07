@@ -1,7 +1,6 @@
 import 'package:Ecommerce/core/model/product_model.dart';
 import 'package:Ecommerce/feature/home/data/repos/home_repo.dart';
-import 'package:bloc/bloc.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
 part 'fetch_all_products_state.dart';
 
 class FetchAllProductsCubit extends Cubit<FetchAllProductsState> {
@@ -11,6 +10,7 @@ class FetchAllProductsCubit extends Cubit<FetchAllProductsState> {
 
   Future<void> fetchAllProduct() async {
     emit(FetchAllProductsLoading());
+
     var result = await homeRepo.fetchAllProducts();
     result.fold(
       (failure) {

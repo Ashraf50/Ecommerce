@@ -3,7 +3,6 @@ import 'package:Ecommerce/core/model/product_model.dart';
 import 'package:Ecommerce/core/utils/api_services.dart';
 import 'package:dio/dio.dart';
 import 'package:either_dart/either.dart';
-
 import 'home_repo.dart';
 
 class HomeRepoImpl implements HomeRepo {
@@ -12,15 +11,15 @@ class HomeRepoImpl implements HomeRepo {
   @override
   Future<Either<Failure, List<ProductModel>>> fetchAllProducts() async {
     try {
-      var data =
-          await apiService.get(endPoint: "https://dummyjson.com/products");
+      var data = await apiService.get(
+          endPoint: "https://dummyjson.com/products?limit=100");
       List<ProductModel> productList = [];
       for (var product in data["products"]) {
         productList.add(ProductModel.fromJson(product));
       }
       return Right(productList);
     } catch (e) {
-      if (e is DioError) {
+      if (e is DioException) {
         return Left(ServerFailure.fromDiorError(e));
       }
       return Left(
@@ -41,7 +40,7 @@ class HomeRepoImpl implements HomeRepo {
       }
       return Right(productList);
     } catch (e) {
-      if (e is DioError) {
+      if (e is DioException) {
         return Left(ServerFailure.fromDiorError(e));
       }
       return Left(
