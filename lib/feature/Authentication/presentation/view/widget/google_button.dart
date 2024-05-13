@@ -6,6 +6,7 @@ import 'package:Ecommerce/feature/Authentication/presentation/view_model/auth_bl
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:get/get.dart';
 
 class GoogleButton extends StatelessWidget {
   const GoogleButton({super.key});
@@ -18,12 +19,7 @@ class GoogleButton extends StatelessWidget {
         if (state is GooglSIgnLoading) {
           isLoading = true;
         } else if (state is GooglSIgnSuccess) {
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const BottomBar(),
-            ),
-          );
+          Get.to(() => const BottomBar());
           isLoading = false;
         } else if (state is GooglSIgnFailure) {
           isLoading = false;
