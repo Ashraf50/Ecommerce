@@ -36,7 +36,12 @@ class _SignInViewBodyState extends State<SignInViewBody> {
         if (state is LoginLoading) {
           isLoading = true;
         } else if (state is LoginSuccess) {
-          Get.to(() => const BottomBar());
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const BottomBar(),
+            ),
+          );
           showSnackBar(context, "Welcome");
           isLoading = false;
         } else if (state is LoginFailure) {

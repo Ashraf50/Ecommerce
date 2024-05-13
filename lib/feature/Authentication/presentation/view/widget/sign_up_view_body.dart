@@ -37,7 +37,12 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
         if (state is RegisterLoading) {
           isLoading = true;
         } else if (state is RegisterSuccess) {
-          Get.to(() => const SignInView());
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const SignInView(),
+            ),
+          );
           showSnackBar(context, "Success");
           isLoading = false;
         } else if (state is RegisterFailure) {
