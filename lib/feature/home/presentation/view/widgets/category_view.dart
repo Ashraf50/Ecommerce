@@ -50,9 +50,10 @@ class CategoryView extends StatelessWidget {
                     if (state is FetchAllCategorySuccess) {
                       return GridView.builder(
                           gridDelegate:
-                              const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            childAspectRatio: 0.68,
+                              SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount:
+                                (MediaQuery.of(context).size.width ~/ 200)
+                                    .toInt(),
                           ),
                           shrinkWrap: true,
                           physics: const NeverScrollableScrollPhysics(),

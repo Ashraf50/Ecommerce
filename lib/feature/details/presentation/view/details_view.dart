@@ -32,7 +32,7 @@ class DetailsView extends StatelessWidget {
           ),
           ProductImages(product: product),
           const SizedBox(
-            height: 20,
+            height: 15,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -72,12 +72,15 @@ class DetailsView extends StatelessWidget {
                 const SizedBox(
                   height: 5,
                 ),
-                SelectableText(
-                  product.description!,
-                  textAlign: TextAlign.justify,
-                  style: const TextStyle(
-                    fontSize: 17,
-                    color: AppColors.primaryColor,
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: SelectableText(
+                    product.description!,
+                    textAlign: TextAlign.justify,
+                    style: const TextStyle(
+                      fontSize: 17,
+                      color: AppColors.primaryColor,
+                    ),
                   ),
                 ),
               ],

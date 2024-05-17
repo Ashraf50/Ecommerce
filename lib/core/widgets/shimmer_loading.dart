@@ -10,13 +10,12 @@ class Loading extends StatelessWidget {
     return SizedBox(
       height: 1000,
       child: GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          childAspectRatio: 0.68,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: (MediaQuery.of(context).size.width ~/ 200).toInt(),
         ),
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
-        itemCount: 9,
+        itemCount: 20,
         itemBuilder: (context, index) {
           return Container(
             margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),

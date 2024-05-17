@@ -17,7 +17,7 @@ class CategoriesListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return InkWell(
             onTap: () {
-              Get.to(CategoryView(category: allCategories[index]));
+              Get.to(() => CategoryView(category: allCategories[index]));
             },
             child: CategoryItem(categoryName: allCategories[index]),
           );

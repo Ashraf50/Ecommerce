@@ -47,12 +47,16 @@ class ProductItem extends StatelessWidget {
               IconButton(onPressed: onPressed, icon: icon),
             ],
           ),
-          Container(
-            padding: const EdgeInsets.all(10),
-            child: Image.network(
-              product.thumbnail!,
-              height: 100,
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 5),
+              child: Image.network(
+                product.thumbnail!,
+              ),
             ),
+          ),
+          const SizedBox(
+            height: 10,
           ),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 5),
@@ -61,48 +65,36 @@ class ProductItem extends StatelessWidget {
               maxLines: 2,
               product.title!,
               style: const TextStyle(
-                  overflow: TextOverflow.ellipsis,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 15,
-                  color: AppColors.primaryColor),
-            ),
-          ),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 5),
-            alignment: Alignment.centerLeft,
-            child: const Text(
-              "",
-              style: TextStyle(
-                fontSize: 13,
+                overflow: TextOverflow.ellipsis,
+                fontWeight: FontWeight.bold,
+                fontSize: 15,
                 color: AppColors.primaryColor,
               ),
             ),
           ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 5),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "\$${product.price}",
-                    style: const TextStyle(
-                      color: AppColors.primaryColor,
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                    ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "\$${product.price}",
+                  style: const TextStyle(
+                    color: AppColors.primaryColor,
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
                   ),
-                  IconButton(
-                    onPressed: () {
-                      cubit.add(product);
-                    },
-                    icon: const Icon(
-                      Icons.shopping_cart_checkout,
-                      color: AppColors.primaryColor,
-                    ),
-                  )
-                ],
-              ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    cubit.add(product);
+                  },
+                  icon: const Icon(
+                    Icons.shopping_cart_checkout,
+                    color: AppColors.primaryColor,
+                  ),
+                )
+              ],
             ),
           )
         ],

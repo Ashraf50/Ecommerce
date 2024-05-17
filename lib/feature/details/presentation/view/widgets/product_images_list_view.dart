@@ -11,7 +11,8 @@ class ProductImages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 300,
+      height: MediaQuery.of(context).size.height * .5,
+      width: MediaQuery.of(context).size.width * .4,
       child: Swiper(
         autoplay: true,
         itemCount: product.images!.length,
@@ -26,7 +27,6 @@ class ProductImages extends StatelessWidget {
               },
               child: Image.network(
                 product.images![index],
-                fit: BoxFit.fill,
               ),
             ),
           );

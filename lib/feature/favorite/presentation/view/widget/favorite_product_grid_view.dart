@@ -15,9 +15,8 @@ class FavoriteProductGridView extends StatelessWidget {
       builder: (context, state) {
         var cubit = FavoriteCubit.get(context);
         return GridView.builder(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            childAspectRatio: 0.8,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: (MediaQuery.of(context).size.width ~/ 200).toInt(),
           ),
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
