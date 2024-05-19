@@ -1,4 +1,4 @@
-import 'package:Ecommerce/core/widgets/bottom_bar.dart';
+import 'package:Ecommerce/adaptive_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -15,7 +15,7 @@ class _SplashViewState extends State<SplashView> {
     super.initState();
     Future.delayed(const Duration(seconds: 6), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (context) => const BottomBar(),
+        builder: (context) => const AdaptiveUi(),
       ));
     });
   }

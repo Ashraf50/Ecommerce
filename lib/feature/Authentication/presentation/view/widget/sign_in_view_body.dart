@@ -1,5 +1,5 @@
+import 'package:Ecommerce/adaptive_ui.dart';
 import 'package:Ecommerce/core/constant/colors.dart';
-import 'package:Ecommerce/core/widgets/bottom_bar.dart';
 import 'package:Ecommerce/core/widgets/custom_button.dart';
 import 'package:Ecommerce/core/widgets/show_snack_bar.dart';
 import 'package:Ecommerce/feature/Authentication/presentation/view/forget_password_view.dart';
@@ -36,7 +36,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
         if (state is LoginLoading) {
           isLoading = true;
         } else if (state is LoginSuccess) {
-          Get.to(() => const BottomBar());
+          Get.to(() => const AdaptiveUi());
           showSnackBar(context, "Welcome");
           isLoading = false;
         } else if (state is LoginFailure) {

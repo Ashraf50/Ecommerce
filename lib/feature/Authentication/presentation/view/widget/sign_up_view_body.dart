@@ -1,4 +1,3 @@
-import 'package:Ecommerce/core/widgets/bottom_bar.dart';
 import 'package:Ecommerce/core/widgets/custom_button.dart';
 import 'package:Ecommerce/core/widgets/show_snack_bar.dart';
 import 'package:Ecommerce/feature/Authentication/presentation/view/sign_in_view.dart';
@@ -38,7 +37,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
         if (state is RegisterLoading) {
           isLoading = true;
         } else if (state is RegisterSuccess) {
-          Get.to(() => const BottomBar());
+          Get.to(() => const SignInView());
           showSnackBar(context, "Success");
           isLoading = false;
         } else if (state is RegisterFailure) {
