@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "newecommerce-d72c9",
+    "shopping": "newecommerce-d72c9"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}
